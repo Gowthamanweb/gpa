@@ -1,4 +1,4 @@
-#sem-1{
+           #sem-1{
                display: none;
            }
            #sem-2{
@@ -6,4 +6,12 @@
            }
            #sem-5{
                 display: none; 
+           }
+
+           .panel-heading{
+              font-size: 20px;
+           }
+           h4{
+            font-size: 18px;
+            text-decoration: underline;
            }
