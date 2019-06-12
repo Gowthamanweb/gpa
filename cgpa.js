@@ -147,7 +147,7 @@ function sem6(e){
     var lab2 = document.getElementById("sem6_lab2").value;
     var lab3 = document.getElementById("sem6_lab3").value;
 
-    var credit = 25;
+    var credit = 24;
     if (sub1 == 0){
         credit = credit-4;
     }
