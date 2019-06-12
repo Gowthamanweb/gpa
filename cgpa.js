@@ -175,7 +175,7 @@ function sem6(e){
     if ( lab3 == 0) {
         credit = credit-2;
     }
-    var sum6 = (sub1*4)+(sub2*3)+(sub3*3)+(sub4*3)+(sub5*3)+(sub6*3)+(lab1*2)+(lab2*2)+(lab3*2);
+    var sum6 = (sub1*3)+(sub2*3)+(sub3*3)+(sub4*3)+(sub5*3)+(sub6*3)+(lab1*2)+(lab2*2)+(lab3*2);
     /*console.log(sum5); */
     var gpa6 = (sum6/credit).toFixed(3);
     /* console.log(gpa5); */
