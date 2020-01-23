@@ -1,7 +1,4 @@
 
-function refresh(){
-
-}
 /* SELECTING SEM SCRIPT */
 document.getElementById("sel_sem").addEventListener("click",display);
 function display(e){
@@ -17,12 +14,14 @@ function display(e){
             document.getElementById("sem-2").style.display = "none";
             document.getElementById("sem-5").style.display = "none";
             document.getElementById("sem-6").style.display = "none";
+            document.getElementById("sem-7").style.display = "none";
             break;
         case "2":
             document.getElementById("sem-1").style.display = "none";
             document.getElementById("sem-2").style.display = "block";
             document.getElementById("sem-5").style.display = "none";
             document.getElementById("sem-6").style.display = "none";
+            document.getElementById("sem-7").style.display = "none";
             break;
         case "5":
                 console.log("sem5");
@@ -30,6 +29,7 @@ function display(e){
             document.getElementById("sem-2").style.display = "none";
             document.getElementById("sem-5").style.display = "block";
             document.getElementById("sem-6").style.display = "none";
+            document.getElementById("sem-7").style.display = "none";
             break;
         case "6":
             console.log("sem6");
@@ -37,6 +37,15 @@ function display(e){
             document.getElementById("sem-2").style.display = "none";
             document.getElementById("sem-5").style.display = "none";
             document.getElementById("sem-6").style.display = "block";
+            document.getElementById("sem-7").style.display = "none";
+            break;
+        case "7":
+            console.log("sem7");
+            document.getElementById("sem-1").style.display = "none";
+            document.getElementById("sem-2").style.display = "none";
+            document.getElementById("sem-5").style.display = "none";
+            document.getElementById("sem-6").style.display = "none";
+            document.getElementById("sem-7").style.display = "block";
             break;
     }
 }
@@ -58,7 +67,7 @@ function sem1(e){
     var sum1 = (sub1*3)+(sub2*4)+(sub3*3)+(sub4*3)+(sub5*3)+(sub6*4)+(lab1*2)+(lab2*2);
     var gpa1 = (sum1/24).toFixed(3);
     alert("your cgpa is: "+gpa1);
-    
+
 }
 
 /* SECOND SEM GPA CALCULATING SCRIPT */
@@ -80,7 +89,7 @@ function sem2(e){
     var gpa2 = (sum2/25).toFixed(3);
     /*console.log(gpa2); */
     alert("your cgpa is: "+gpa2);
-    
+
 }
 
 /* FIFTH SEM GPA CALCULATING SCRIPT */
@@ -130,7 +139,7 @@ function sem5(e){
     var gpa5 = (sum5/credit).toFixed(3);
     /* console.log(gpa5); */
     alert("your cgpa is: "+gpa5);
-    
+
 }
 
 /* SIXTH SEM GPA CALCULATING SCRIPT */
@@ -180,5 +189,55 @@ function sem6(e){
     var gpa6 = (sum6/credit).toFixed(3);
     /* console.log(gpa5); */
     alert("your cgpa is: "+gpa6);
-    
+
+}
+
+/* SIXTH SEM GPA CALCULATING SCRIPT */
+document.getElementById("cal-7").addEventListener("click",sem7);
+function sem7(e){
+    e.preventDefault();
+    var sub1 = document.getElementById("sem7_pe").value;
+    var sub2 = document.getElementById("sem7_mc").value;
+    var sub3 = document.getElementById("sem7_st").value;
+    var sub4 = document.getElementById("sem7_cns").value;
+    var sub5 = document.getElementById("sem7_elec1").value;
+    var sub6 = document.getElementById("sem7_elec2").value;
+    var lab1 = document.getElementById("sem7_lab1").value;
+    var lab2 = document.getElementById("sem7_lab2").value;
+    var lab3 = document.getElementById("sem7_lab3").value;
+
+    var credit = 24;
+    if (sub1 == 0){
+        credit = credit-3;
+    }
+    if (sub2 == 0) {
+        credit = credit-3;
+    }
+    if (sub3 == 0) {
+        credit = credit-3;
+    }
+    if ( sub4 == 0) {
+        credit = credit-3;
+    }
+    if ( sub5 == 0) {
+        credit = credit-3;
+    }
+    if ( sub6 == 0) {
+        credit = credit-3;
+    }
+    if ( lab1 == 0) {
+        credit = credit-2;
+    }
+    if ( lab2 == 0) {
+        credit = credit-2;
+    }
+    if ( lab3 == 0) {
+        credit = credit-2;
+    }
+    var sum7 = (sub1*3)+(sub2*3)+(sub3*3)+(sub4*3)+(sub5*3)+(sub6*3)+(lab1*2)+(lab2*2)+(lab3*2);
+    console.log(sum7);
+    var gpa7 = (sum7/credit).toFixed(3);
+    console.log(gpa7);
+    alert("your cgpa is: "+gpa7);
+
 }
